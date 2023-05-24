@@ -1,24 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { TextField } from '@mui/material';
+import Login from './User/Login';
 
 function App() {
+  const context = React.createContext('');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Login>
+        <TextField id="username" label="Username" variant="outlined" />
+        <TextField id='password' type='password' label="Password" variant="outlined" />
+      </Login>
     </div>
   );
 }
